@@ -1,0 +1,5 @@
+<div class="list-group">
+  <ng-container *ngFor="let device of result | devicesFilter: searchInput">
+    <app-device-status [displayInfo]='true' [device]="device"></app-device-status>
+  </ng-container>
+</div>

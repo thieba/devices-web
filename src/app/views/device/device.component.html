@@ -1,0 +1,15 @@
+<div *ngIf="device" class="row">
+  <div class="col-md-6 col-sm-12 order-md-1 order-sm-12">
+    <div class="card bg-light px-3 py-2">
+      <h2>
+        Related Devices
+      </h2>
+    </div>
+    <ng-container *ngFor="let relatedDevice of device?.relatedDevices">
+      <app-device-status [device]="relatedDevice"></app-device-status>
+    </ng-container>
+  </div>
+  <div class="col-md-6 col-sm-12 order-md-12 order-sm-1 mb-3">
+    <app-device-details [device]="device"></app-device-details>
+  </div>
+</div>

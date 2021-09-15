@@ -1,0 +1,14 @@
+<button class="list-group-item list-group-item-action d-flex flex-row bg-light my-2" (click)="onDeviceClick()">
+  <i class="h2 align-self-center bi bi-{{device?.type}}-fill mx-4"></i>
+  <div class="flex-grow-1 ml-4">
+    <div class="d-flex flex-column">
+      <span>
+        {{device?.name}}
+      </span>
+      <span class="text-secondary">
+        {{device?.status}}
+      </span>
+    </div>
+  </div>
+  <i *ngIf="displayInfo" class="h2 align-self-center bi bi-info-circle-fill mx-4" title="Details for {{device?.name}}"></i>
+</button>
